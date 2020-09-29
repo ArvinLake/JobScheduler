@@ -21,7 +21,8 @@ public class JobPublisher {
     public void reportSuccess(AbstractJob job) {
         String key = job.getJobId();
         String value = Config.REDIS_KEY_JOB_SUCCESS;
-        //TODO set value to redis:SET key value
+        //TODO 1.set value to redis:SET key value
+        //TODO 2.update to DB
     }
 
     public void reportFail(AbstractJob job) {
