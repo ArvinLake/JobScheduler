@@ -1,5 +1,6 @@
 package com.arvin;
 
+import com.arvin.config.Config;
 import com.arvin.utils.IpUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -25,6 +26,7 @@ public class JobRacer {
             return 1;
         }
 
+        //如果任务已经执行成功，则value为success，否则alue仍为执行该任务的ip
         String value = "";// GET key
         if (!Config.REDIS_KEY_JOB_SUCCESS.equals(value)) {
             if (isAlive(value)) {

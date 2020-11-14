@@ -1,5 +1,6 @@
 package com.arvin;
 
+import com.arvin.config.Config;
 import com.arvin.utils.BeanUtil;
 import com.arvin.utils.IpUtil;
 

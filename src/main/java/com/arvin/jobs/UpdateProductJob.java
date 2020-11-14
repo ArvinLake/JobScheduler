@@ -1,4 +1,6 @@
-package com.arvin;
+package com.arvin.jobs;
+
+import com.arvin.AbstractJob;
 
 import java.util.Date;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -8,7 +10,7 @@ public class UpdateProductJob extends AbstractJob {
     private boolean retryIfSkiped = false;
 
     public UpdateProductJob(long batch, Date executeDate) {
-        super("com.arvin.UpdateProductJob", batch, executeDate);
+        super("com.arvin.jobs.UpdateProductJob", batch, executeDate);
     }
 
     @Override

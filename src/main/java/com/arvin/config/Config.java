@@ -1,6 +1,11 @@
-package com.arvin;
+package com.arvin.config;
 
 public class Config {
+
+    /**
+     * job schedule
+     */
+    public static final int THREAD_POOL_SIZE = 3;
 
     /**
      * job list
