@@ -41,6 +41,6 @@ public class JobScheduler {
     private void report() {
         executorService.scheduleAtFixedRate(() -> {
             BeanUtil.getBean(JobPublisher.class).reportAlive();
-        }, 0, 5, TimeUnit.SECONDS);
+        }, 0, Config.HOST_ALIVE_REPORT_GAP_SECONDS, TimeUnit.SECONDS);
     }
 }

@@ -14,13 +14,11 @@ public class JobReceiver {
             if (StringUtils.isEmpty(msg)) {
                 continue;
             }
-            AbstractJob job = parse(msg);
-            scheduler.schedule(job);
+            try {
+                scheduler.schedule(AbstractJob.parse(msg));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-    }
-
-    private AbstractJob parse(String msg) {
-        //TODO
-        return null;
     }
 }

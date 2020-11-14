@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class UpdateProductJob extends AbstractJob {
-    private static final AtomicInteger executeTimes = new AtomicInteger(0);
     private boolean retryIfSkiped = false;
 
     public UpdateProductJob(long batch, Date executeDate) {
@@ -33,10 +32,5 @@ public class UpdateProductJob extends AbstractJob {
     @Override
     public AbstractJob nextJob() {
         return null;
-    }
-
-    @Override
-    public int getExecuteTimes() {
-        return executeTimes.incrementAndGet();
     }
 }
